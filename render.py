@@ -2,11 +2,9 @@
 """Render page.html to entry.png with the local headless Chrome.
 
 No network: the page is loaded from file:// and every drawing is inline
-SVG/CSS in page.html plus three raster lead images loaded from local files in
-art/ (cop31.png, riyadh.png, peru.png), so the screenshot is fully
-deterministic. The raw screenshot is re-saved through Pillow, which strips any
-encoder variance, so the shipped bytes are stable: same pixels in, same bytes
-out, every run.
+SVG/CSS in page.html, so the screenshot is fully deterministic. The raw screenshot is re-saved
+through Pillow, which strips any encoder variance, so the shipped
+bytes are stable: same pixels in, same bytes out, every run.
 """
 import os
 import subprocess
